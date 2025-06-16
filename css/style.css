@@ -26,17 +26,27 @@ body {
     .nav-links {
       display: flex;
       gap: 20px;
+      
     }
 
     .nav-links a {
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
+      color: #185691;
+      font-weight: 600;
       transition: color 0.3s;
+       color: rgb(5, 69, 105);
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2rem;
+      position: relative;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* 👈 sombra */
+      transition: color 0.3s ease;
+      
     }
+    
 
     .nav-links a:hover {
-      color: #0057d8; /* azul institucional */
+      color: #0057d8; 
     }
 
     .acciones-derecha {
@@ -95,14 +105,25 @@ body {
     /* BANNER */
     .banner {
   width: 100%;
-  height: 400px;
-  background: linear-gradient(to right, #082e55, #5e82ac); /* Fondo con degradado */
-  color: white;
+  height: 800px;
+  background: linear-gradient(to right, #020202, #5e82ac); 
+  background-image: url(../images/logo1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  font-size: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  overflow: hidden;
+  text-shadow: 1px 1px 3px black;
+  position: relative;
 }
+.banner-content h1, .banner-content p {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);}
 
 .banner-overlay {
   width: 100%;
@@ -113,19 +134,6 @@ body {
   padding: 0 40px;
 }
 
-.banner-texto {
-  max-width: 600px;
-}
-
-.banner-texto h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.banner-texto p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
 
 .btn-banner {
   background-color: white;
@@ -137,7 +145,31 @@ body {
 }
 
 .banner-imagen img {
-  height: 350px;
+  height:350px;
   object-fit: contain;
   border-radius: 20px; 
+  
 }
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen */
+  z-index: 1;
+}
+
+.banner h1 {
+  position: relative;
+  z-index: 2;
+
+
+}
+
+
+
+
+
